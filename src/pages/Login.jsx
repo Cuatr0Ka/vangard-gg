@@ -39,11 +39,18 @@ export default function Login() {
     return (
         <>
             <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap');
-        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        input::placeholder { color: #3a3a5c; }
-      `}</style>
+                @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap');
+                @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+                * { box-sizing: border-box; margin: 0; padding: 0; }
+                input::placeholder { color: #3a3a5c; }
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover,
+                input:-webkit-autofill:focus {
+                -webkit-text-fill-color: #e2e8f0;
+                -webkit-box-shadow: 0 0 0px 1000px rgba(8,8,18,0.97) inset;
+                transition: background-color 5000s ease-in-out 0s;
+            }
+            `}</style>
 
             <div style={{
                 height: "100vh", width: "100vw", overflow: "hidden",
